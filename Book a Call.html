@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Book A Call</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("file:///C:/Users/Jaganathan%20V/Downloads/A.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" onsubmit="getacall(event)">
+            <h1 class="text-center">Book A Call</h1>
+            <p class="text-center">Book a call slot, our representative will call you within one hour of the selected time</p>
+            <hr><br>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Phone Number:</label>
+                <input type="tel" class="form-control" id="tel" name="tel" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time For Call:</label>
+                <div class="row">
+                    <div class="col-md-6" >
+                        <input type="date" class="form-control" id="date" name="date" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="time" class="form-control" id="time" name="time" required>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary btn-block">Get A Call</button>
+        </form>
+    </div>
+    <script>
+        function getacall(event) {
+            event.preventDefault();
+            console.log(document.getElementById('name').value);
+            console.log(document.getElementById('email').value);
+            console.log(document.getElementById('tel').value);
+            console.log(document.getElementById('date').value);
+            console.log(document.getElementById('time').value);
+        }
+    </script>
+</body>
+
+</html>
